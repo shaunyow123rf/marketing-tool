@@ -76,7 +76,7 @@ const SelectCampaign = (props) => {
             <div>
               {campaignEvents.map((o, i) => {
                 return (
-                  <FormGroup check key={o.id}>
+                  <FormGroup check key={o.id} style={{ marginTop: 6 }}>
                     <Label check>
                       <Input
                         type="radio"

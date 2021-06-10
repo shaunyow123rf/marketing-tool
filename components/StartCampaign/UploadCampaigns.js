@@ -7,15 +7,17 @@ const UploadCampaigns = (props) => {
   const [csvFileName, setCsvFileName] = useState('');
 
   const onUploadCSVFile = async () => {
-    setLoading(true);
-    // call upload api here
-    setTimeout(() => {
-      const response = { status: true };
-      if (response.status) {
-        setLoading(false);
-        setCsvUploaded(true);
-      }
-    }, 3000);
+    if (csvFileName?.length > 0) {
+      setLoading(true);
+      // call upload api here
+      setTimeout(() => {
+        const response = { status: true };
+        if (response.status) {
+          setLoading(false);
+          setCsvUploaded(true);
+        }
+      }, 3000);
+    }
   };
 
   const onChooseCSVFile = (e) => {
