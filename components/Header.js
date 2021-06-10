@@ -5,7 +5,10 @@ const Header = () => {
     <header className="header-wrapper">
       <div className="header-name">
         <Link href="/">
-          <a>Push Notification Tool</a>
+          <a>
+            <img src="/notification-white.png" height={32} />
+            <span style={{ marginLeft: 12 }}>Campaign Notification Tool</span>
+          </a>
         </Link>
       </div>
       <div>
@@ -15,21 +18,6 @@ const Header = () => {
               <a>Start Campaign</a>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/notification">
-              <a>Create Notification</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/campaign">
-              <a>Create Campaign</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/segment">
-              <a>Create Segment</a>
-            </Link>
-          </li> */}
           <li>
             <a href="#about">Logout</a>
           </li>
@@ -69,7 +57,7 @@ const Header = () => {
           color: #ffffff;
           font-weight: 600;
           text-align: center;
-          padding: 16px;
+          padding: 20px;
           text-decoration: none;
         }
         li a:hover {

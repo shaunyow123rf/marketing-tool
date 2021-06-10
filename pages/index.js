@@ -1,11 +1,14 @@
+import Image from 'next/image';
 import PageLayout from '../components/PageLayout';
 
 const Home = () => {
   return (
     <PageLayout>
       <h1 className="welcomeMessage mx-auto">
+        <Image src="/notification.png" height={60} width={51} />
+        <br />
         Welcome to
-        <br /> Push Notification Tool!
+        <br /> Campaign Notification Tool!
       </h1>
       <style jsx>{`
         .welcomeMessage {

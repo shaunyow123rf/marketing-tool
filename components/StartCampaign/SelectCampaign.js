@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Label, Button, Form, FormGroup, Input, FormText } from 'reactstrap';
 // import { Button, CustomInput, Form, FormGroup, Label } from 'reactstrap';
 
 const SelectCampaign = (props) => {
-  const { setLoading } = props;
+  const { setLoading, setCampaignStarted, onCloseDialogBox } = props;
 
   const [selectedId, setSelectedId] = useState();
 
@@ -55,7 +55,13 @@ const SelectCampaign = (props) => {
   const onStartCampaign = () => {
     setLoading(true);
     // call api here
-    setLoading(false);
+    setTimeout(() => {
+      const response = { status: true };
+      if (response.status) {
+        setLoading(false);
+        setCampaignStarted(true);
+      }
+    }, 3000);
   };
   const handleCampaignSelection = (e) => {
     setSelectedId(e.target.attributes[0].value);
@@ -70,13 +76,7 @@ const SelectCampaign = (props) => {
             <div>
               {campaignEvents.map((o, i) => {
                 return (
-                  //   <CustomInput
-                  //     type="radio"
-                  //     id={o.id}
-                  //     name="o.id"
-                  //     label={`${o.country}: ${o.event} (${o.noOfUser} users)`}
-                  //   />
-                  <FormGroup check>
+                  <FormGroup check key={o.id}>
                     <Label check>
                       <Input
                         type="radio"
@@ -97,6 +97,13 @@ const SelectCampaign = (props) => {
         <br />
         <Button color="primary" onClick={onStartCampaign}>
           Start Campaign
+        </Button>
+        <Button
+          color="secondary"
+          onClick={onCloseDialogBox}
+          style={{ marginLeft: 10 }}
+        >
+          Close
         </Button>
       </div>
 

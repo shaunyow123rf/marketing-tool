@@ -1,20 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Button, Form, FormGroup, Input, FormText } from 'reactstrap';
 
 const UploadCampaigns = (props) => {
-  const { setLoading, setCsvUploaded } = props;
+  const { setLoading, setCsvUploaded, onCloseDialogBox } = props;
 
   const [csvFileName, setCsvFileName] = useState('');
 
   const onUploadCSVFile = async () => {
     setLoading(true);
-    console.log('csvFileName', csvFileName);
     // call upload api here
-    const response = { status: true };
-    if (response.status) {
-      setLoading(false);
-      setCsvUploaded(true);
-    }
+    setTimeout(() => {
+      const response = { status: true };
+      if (response.status) {
+        setLoading(false);
+        setCsvUploaded(true);
+      }
+    }, 3000);
   };
 
   const onChooseCSVFile = (e) => {
@@ -45,6 +46,13 @@ const UploadCampaigns = (props) => {
         <br />
         <Button color="primary" onClick={onUploadCSVFile}>
           Upload CSV File
+        </Button>
+        <Button
+          color="secondary"
+          onClick={onCloseDialogBox}
+          style={{ marginLeft: 10 }}
+        >
+          Close
         </Button>
       </div>
     </>

@@ -1,15 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import Router from 'next/router';
 
 import UploadCampaigns from './UploadCampaigns';
 import LoadingSpinner from '../LoadingSpinner';
 import SelectCampaign from './SelectCampaign';
+import CampaignRunning from './CampaignRunning';
 
 const StartCampaign = () => {
   const [loading, setLoading] = useState(false);
   const [csvUploaded, setCsvUploaded] = useState(false);
   const [campaignStarted, setCampaignStarted] = useState(false);
 
-  // if (loading) return <LoadingSpinner />;
+  const onCloseDialogBox = () => {
+    Router.push('/');
+  };
+
   return (
     <section className="campaign-wrapper mx-auto">
       {loading && <LoadingSpinner />}
@@ -17,13 +22,18 @@ const StartCampaign = () => {
         <UploadCampaigns
           setLoading={setLoading}
           setCsvUploaded={setCsvUploaded}
+          onCloseDialogBox={onCloseDialogBox}
         />
       )}
-      {csvUploaded && campaignStarted && (
+      {csvUploaded && !campaignStarted && (
         <SelectCampaign
           setLoading={setLoading}
           setCampaignStarted={setCampaignStarted}
+          onCloseDialogBox={onCloseDialogBox}
         />
+      )}
+      {csvUploaded && campaignStarted && (
+        <CampaignRunning onCloseDialogBox={onCloseDialogBox} />
       )}
 
       <style jsx>{`
