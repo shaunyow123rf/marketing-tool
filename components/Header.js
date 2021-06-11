@@ -6,8 +6,8 @@ const Header = () => {
       <div className="header-name">
         <Link href="/">
           <a className="d-flex align-items-center">
-            <img src="/123rf-logo-white.png" height="32px" />
-            <span style={{ marginLeft: 14 }}>Campaign Notification Tool</span>
+            <img src="/123rf-logo-white.png" height="25px" />
+            <span style={{ marginLeft: 12 }}>Campaign Notification Tool</span>
           </a>
         </Link>
       </div>
@@ -38,7 +38,7 @@ const Header = () => {
         .header-name {
           color: #ffffff;
           font-weight: bolder;
-          font-size: 24px;
+          font-size: 22px;
         }
         .header-name a {
           color: #ffffff;
