@@ -5,8 +5,8 @@ const Header = () => {
     <header className="header-wrapper">
       <div className="header-name">
         <Link href="/">
-          <a>
-            <img src="/notification-white.png" height="32px" />
+          <a className="d-flex align-items-center">
+            <img src="/123rf-logo-white.png" height="32px" />
             <span style={{ marginLeft: 14 }}>Campaign Notification Tool</span>
           </a>
         </Link>
@@ -30,7 +30,7 @@ const Header = () => {
           align-items: center;
           justify-content: space-between;
           width: 100%;
-          background-color: #333333;
+          background-color: rgba(0, 0, 0, 0.75);
           opacity: 0.8;
           padding: 0 16px 0 32px;
         }

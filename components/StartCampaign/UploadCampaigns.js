@@ -17,6 +17,8 @@ const UploadCampaigns = (props) => {
           setCsvUploaded(true);
         }
       }, 3000);
+    } else {
+      alert("You haven't chosen a CSV file yet...");
     }
   };
 

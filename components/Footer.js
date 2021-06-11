@@ -1,37 +1,17 @@
 const Footer = () => {
   return (
     <footer className="footer">
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <span className="logo">
-          <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span>
-      </a>
-
+      <span>All rights reserved. © Inmagine Lab Pte Ltd 2021.</span>
       <style jsx>{`
         .footer {
           width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
+          height: 40px;
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        .footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-grow: 1;
-        }
-
-        .logo {
-          height: 1em;
-          margin-left: 0.5rem;
+          color: #ffffff;
+          background-color: rgba(0, 0, 0, 0.75);
+          opacity: 0.8;
         }
       `}</style>
     </footer>

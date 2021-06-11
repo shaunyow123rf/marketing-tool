@@ -18,7 +18,7 @@ const PageLayout = (props) => {
           background-color: #ccebe9;
           background-position: top center;
           background-size: cover;
-          background-image: url('/campaign-bg.png');
+          background-image: url('/144596889.jpg');
           background-repeat: no-repeat;
         }
       `}</style>
