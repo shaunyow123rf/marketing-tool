@@ -31,7 +31,7 @@ const Header = () => {
           justify-content: space-between;
           width: 100%;
           background-color: #333333;
-          opacity: 0.9;
+          opacity: 0.8;
           padding: 0 16px 0 32px;
         }
         .header-name {

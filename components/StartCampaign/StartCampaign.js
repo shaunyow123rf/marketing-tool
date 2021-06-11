@@ -11,6 +11,11 @@ const StartCampaign = () => {
   const [csvUploaded, setCsvUploaded] = useState(false);
   const [campaignStarted, setCampaignStarted] = useState(false);
 
+  const onUploadNewCampaigns = () => {
+    setCsvUploaded(false);
+    setCampaignStarted(false);
+  };
+
   const onCloseDialogBox = () => {
     Router.push('/');
   };
@@ -29,11 +34,15 @@ const StartCampaign = () => {
         <SelectCampaign
           setLoading={setLoading}
           setCampaignStarted={setCampaignStarted}
+          onUploadNewCampaigns={onUploadNewCampaigns}
           onCloseDialogBox={onCloseDialogBox}
         />
       )}
       {csvUploaded && campaignStarted && (
-        <CampaignRunning onCloseDialogBox={onCloseDialogBox} />
+        <CampaignRunning
+          onUploadNewCampaigns={onUploadNewCampaigns}
+          onCloseDialogBox={onCloseDialogBox}
+        />
       )}
 
       <style jsx>{`

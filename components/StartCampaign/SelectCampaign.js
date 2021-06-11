@@ -5,7 +5,12 @@ import { Label, Button, Form, FormGroup, Input, FormText } from 'reactstrap';
 import postCreateCampaign from 'endpoints/postCreateCampaign';
 
 const SelectCampaign = (props) => {
-  const { setLoading, setCampaignStarted, onCloseDialogBox } = props;
+  const {
+    setLoading,
+    setCampaignStarted,
+    onUploadNewCampaigns,
+    onCloseDialogBox,
+  } = props;
 
   const [selectedChannel, setSelectedChannel] = useState('push-notification');
 
@@ -101,6 +106,13 @@ const SelectCampaign = (props) => {
         <div style={{ height: 14, borderTop: '1px solid #eaeaea' }} />
         <Button color="primary" onClick={onStartCampaign}>
           Start Campaign
+        </Button>
+        <Button
+          color="secondary"
+          onClick={onUploadNewCampaigns}
+          style={{ marginLeft: 10 }}
+        >
+          Back
         </Button>
         <Button
           color="secondary"
