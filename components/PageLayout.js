@@ -12,8 +12,8 @@ const PageLayout = (props) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          width: 100%;
-          min-width: 100vw;
+          width: auto;
+          min-width: 100%;
           height: auto;
           min-height: 100vh;
           background-color: #ccebe9;
