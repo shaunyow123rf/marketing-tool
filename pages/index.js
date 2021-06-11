@@ -20,7 +20,6 @@ const Home = () => {
           line-height: 60px;
           transform: rotate(-2deg);
           padding: 3px 40px;
-          margin-top: 30px;
         }
         .welcomeMessage2 {
           transform: rotate(-4deg);

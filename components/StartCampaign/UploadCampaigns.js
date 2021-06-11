@@ -18,7 +18,7 @@ const UploadCampaigns = (props) => {
         }
       }, 3000);
     } else {
-      alert("You haven't chosen a CSV file yet...");
+      alert("You haven't chosen any CSV file yet...");
     }
   };
 
