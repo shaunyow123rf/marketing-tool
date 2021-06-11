@@ -35,10 +35,10 @@ function LoadingSpinner() {
             width: 100px;
             height: 100px;
             margin: 8px;
-            border: 12px solid #ffd44d;
+            border: 12px solid #45aaf2;
             border-radius: 50%;
             animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            border-color: #ffd44d transparent transparent transparent;
+            border-color: #45aaf2 transparent transparent transparent;
           }
           .loading-ring div:nth-child(1) {
             animation-delay: -0.35s;

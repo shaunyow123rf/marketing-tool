@@ -46,6 +46,7 @@ const UploadCampaigns = (props) => {
         </Form>
         <br />
         <br />
+        <div style={{ height: 14, borderTop: '1px solid #eaeaea' }} />
         <Button color="primary" onClick={onUploadCSVFile}>
           Upload CSV File
         </Button>

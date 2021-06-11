@@ -6,8 +6,8 @@ const Header = () => {
       <div className="header-name">
         <Link href="/">
           <a>
-            <img src="/notification-white.png" height={32} />
-            <span style={{ marginLeft: 12 }}>Campaign Notification Tool</span>
+            <img src="/notification-white.png" height="32px" />
+            <span style={{ marginLeft: 14 }}>Campaign Notification Tool</span>
           </a>
         </Link>
       </div>
@@ -31,7 +31,7 @@ const Header = () => {
           justify-content: space-between;
           width: 100%;
           background-color: #333333;
-          opacity: 0.8;
+          opacity: 0.9;
           padding: 0 16px 0 32px;
         }
         .header-name {

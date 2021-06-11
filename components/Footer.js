@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -10,7 +8,7 @@ const Footer = () => {
       >
         Powered by{' '}
         <span className="logo">
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
       </a>
 
