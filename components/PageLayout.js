@@ -12,9 +12,10 @@ const PageLayout = (props) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          width: 100vw;
-          height: 100vh;
-          min-height: 805px;
+          width: 100%;
+          min-width: 100vw;
+          height: auto;
+          min-height: 100vh;
           background-color: #ccebe9;
           background-position: top center;
           background-size: cover;

@@ -33,6 +33,7 @@ const Header = () => {
           background-color: rgba(0, 0, 0, 0.75);
           opacity: 0.8;
           padding: 0 16px 0 32px;
+          margin-bottom: 30px;
         }
         .header-name {
           color: #ffffff;

@@ -12,6 +12,7 @@ const Footer = () => {
           color: #ffffff;
           background-color: rgba(0, 0, 0, 0.75);
           opacity: 0.8;
+          margin-top: 30px;
         }
       `}</style>
     </footer>
